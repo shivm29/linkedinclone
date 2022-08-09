@@ -1,0 +1,1220 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    
+     overflow-x:hidden;
+     box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    background-color: #f3f2ef;
+    
+}
+
+/* --------------------------------------------------------   Nav bar   --------------------------------------------------------------------------- */
+
+
+.header{
+    width: 100%;
+}
+
+nav{
+    height: 52px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.066);
+    box-sizing: border-box;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    /* justify-content: center; */
+}
+
+.bottomnav{
+    visibility: collapse;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 52px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    background-color: white;
+    display: flex;
+    overflow-x: auto;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contentbox{
+    display: flex;
+    /* background-color: gray; */
+    box-sizing: border-box;
+    align-items: center;
+    height: 100%;
+    width: 75%;
+    margin: 0px auto;
+    justify-content: space-between;
+}
+
+.li-icon{
+    float: left;
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+.barcontainer{
+    height: 73%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    width: 37%;
+}
+
+.bar{
+    height: 100%;
+    background-color: white;
+    align-items: center;
+    display: flex;
+    width: 61%;
+    background-color: #eef3f8;
+    border-radius: 4px;
+}
+
+.barcontainer .bar input[type=text]{
+    height: 100%;
+    width: 100%;
+    float:left;
+    border: none;
+    vertical-align: middle;
+    background-color: #eef3f8;
+    border-radius: 4px;
+}
+
+.search{
+    box-sizing: border-box;
+    margin: 2px 10px;
+    opacity: .6;
+    background-color: #eef3f8;
+}
+
+.navblocks{
+    width: 6rem;
+    height: 50px;
+    /* background-color: rgb(255, 255, 255); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 5px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.activenavblocks{
+    width: 81px;
+    height: 50px;
+    /* background-color: rgb(255, 255, 255); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 5px;
+    opacity: 1;
+    cursor: pointer;
+}
+
+ .navblocks:hover {
+    opacity: 1;
+}
+
+.contentbox2{
+    visibility: collapse;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding: .2rem .7rem;
+    align-items: center;
+    width: 100%;
+}
+
+.profileicon{
+    display: flex;
+    box-sizing: border-box;
+    height: 100%;
+    width: 10%;
+    align-items: center;
+    margin: .3rem .3rem;
+    justify-content: center;
+}
+
+.contentboxfaceid{
+    height: 2rem;
+    width: 2rem;
+}
+
+.cb2sb{
+    height: 75%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.cb2sb input[type=text]{
+    height: 100%;
+    width: 100%;
+    float:left;
+    border: none;
+    vertical-align: middle;
+    background-color: #eef3f8;
+    border-radius: 4px;
+    padding: 0 1rem;
+}
+
+.iconname{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:68%;
+    align-self:center;
+}
+
+#me{
+    box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.247);
+}
+
+/* Nav bar media queries :  */
+
+@media (max-width:1175px){
+    .barcontainer{
+        visibility:collapse;
+    }
+}
+
+@media (max-width:855px){
+    .barcontainer{
+        visibility:collapse;
+    }
+    .iconname{
+        visibility: collapse;
+    }
+}
+
+@media (max-width:670px){
+    .barcontainer{
+        visibility:collapse;
+    }
+    .iconname{
+        visibility: collapse;
+    }
+    #grid{
+        visibility: collapse;
+    }
+
+    #me{
+        box-shadow: 0px 0px 0px rgba(255, 255, 255, 0);
+        /* margin-right: 3px; */
+        visibility:collapse;
+    }
+}
+
+/* ----------------------------------------------------------------------------This is section 2-------------------------------------------------------------------------------- */
+
+.content{
+    height: fit-content;  
+    width: 85%;
+    margin: 1.5% auto ;
+    background-color: #f3f2ef;
+    display: flex;
+    flex-direction: row;
+    /* align-self: center; */
+}
+
+.leftcard{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    height:fit-content;
+    width: 20%;
+    border-radius: 7px;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-bottom: .5%;
+    box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.256);
+}
+
+
+
+.middlecard{
+    box-sizing: border-box;
+    display: flex;
+    height: fit-content;                               /* update to fit content later */
+    width: 47.5%;
+    background-color: #f3f2ef;
+    margin: 0 auto;
+    border-radius: 7px;
+    flex-direction: column;
+}
+
+.rightcard{
+    box-sizing: border-box;
+    display: flex;
+    height: fit-content;
+    width: 28%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 7px;
+    box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.256);
+    flex-direction: column;
+}
+
+/* ---------------------------------------------------------Left card elements :------------------------------------------------------------------------------------------------  */
+
+.lcard1{
+    width: 100%;
+    height: 60px;
+    background-color: #a0b4b7;
+    border-radius: 7px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.lcard2{
+    width: 100%;
+    height: 7rem;
+}
+
+.lcard2a{
+    width: 100%;
+    height: 50%;
+}
+.lcard2b{
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    height: 50%;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-bottom: 2%;
+}
+
+.lcard2b1{
+    font-weight: 550;
+    font-size: 1rem;
+    display: flex;
+    height: 50%;
+    width: 100%;
+    justify-content: center;
+    cursor: pointer;
+
+}
+.lcard2b2{
+    display: flex;
+    height: 30%;
+    width: 100%;
+    justify-content: center;
+    font-size: 0.73rem;
+    font-weight: 350;
+    color: rgb(5, 5, 210);
+    cursor: pointer;
+}
+
+.faceimg{
+    z-index: 10;
+    position: absolute;
+    align-self:center;
+    height: 5.5rem;
+    width: 5.5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.lcard2b1:hover{
+    text-decoration:underline;
+}
+.lcard2b2:hover{
+    text-decoration:underline;
+}
+
+.lcard3{
+    box-sizing: border-box;
+    width: 100%;
+    height: 3.9rem;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    padding: 4% 5%;
+    grid-template-columns: auto auto;
+    cursor: pointer;
+    border-top: .006rem solid rgb(231, 231, 231);
+    border-bottom: .006rem solid rgb(231, 231, 231);
+}
+
+.lcard3:hover{
+    background-color: rgba(0, 0, 0, 0.085);
+}
+
+.lcard3a{
+    display: inline-block;
+    height: 1.2rem;
+    background-color: rgb(255, 255, 255);
+    font-weight: 400;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.8rem;
+    color: rgb(133, 132, 132);
+    cursor: pointer;
+    background-color: transparent;
+    
+}
+.lcard3b{
+    display: inline-block;
+    height: 1.2rem;
+    padding: 0px 0.7rem;
+    cursor: pointer;
+    background-color: transparent;
+    
+}
+.lcard3c{
+    display: inline-block;
+    height: 1.2rem;
+    background-color: rgb(255, 255, 255);
+    font-weight: 400;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.8rem;
+    color: rgb(3, 3, 3);
+    cursor: pointer;
+    background-color: transparent;
+    
+}
+.adduser{
+    height: 1rem;
+    width: 1rem;
+    float: right;
+}
+
+.lcard4{
+    width: 100%;
+    height: 3.5rem;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: .4rem .8rem;
+    border-bottom: .006rem solid rgb(231, 231, 231);
+}
+
+.lcard4:hover{
+    background-color: rgba(0, 0, 0, 0.085);
+}
+.lcard4:hover .lcard4b2{
+    color:rgb(5, 5, 210);
+}
+
+.lcard4a{
+    background-color: white;
+    height: 1rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.75rem;
+    color: rgb(115, 115, 115);
+    cursor: pointer;
+    background-color: transparent;
+}
+.lcard4b{
+    background-color: transparent;
+    height: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.lcard4b2{
+    background-color: white;
+    height: 1rem;
+    font-size: 0.75rem;
+    color:rgb(56, 55, 55);
+    cursor: pointer;
+    background-color: transparent;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+}
+.lcard4b1{
+    background-color: transparent;
+    height: 1.2rem;
+    width: 1.2rem;
+    margin-right: 0.3rem;
+}
+.yellow{
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.lcard5{
+    width: 100%;
+    height: 2.5rem;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: 1.6rem auto;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 5%;
+}
+
+.lcard5a{
+    background-color: transparent;
+    height: 1.5rem;
+    cursor: pointer;
+    
+}
+
+.lcard5b{
+    background-color: rgb(182, 179, 179);
+    height: 1.5rem;
+    font-size: 0.75rem;
+    color: rgb(56, 55, 55);
+    cursor: pointer;
+    background-color: transparent;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    
+}
+
+.bookmrk{
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
+.lcard5:hover{
+    background-color: rgba(0, 0, 0, 0.085);
+}
+
+/* ---------------------------------------------------------  Middle card elements -----------------------------------------------------------------------------------------------  */
+
+
+.middlecard1{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 7.5rem;
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    padding: 0.6rem 0.6rem;
+    border-radius: 7px;
+    box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.256);
+}
+
+.middlecard1a{
+    display: flex;
+    box-sizing: border-box;
+    height: 50%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    flex-direction: row;
+    align-items: center;
+}
+
+.middlecard1b{
+    display: flex;
+    box-sizing: border-box;
+    height: 50%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.middlecard1a1{
+    
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    margin-right: 1rem;
+}
+.middlecard1a2{
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 1px solid rgba(0, 0, 0, 0.398);
+    border-radius: 50px;
+    box-sizing: border-box;
+    padding: 0px 1.5rem;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.583);
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0px .1rem;
+}
+
+.faceicon{
+    height: 3rem;
+    width: 3rem;
+}
+
+.middlecard1a2:hover{
+    background-color: rgba(0, 0, 0, 0.085);
+}
+
+.middlecard1b1{
+    display: flex;
+    height: 90%;
+    width: auto;
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    margin: 0 0.1rem;
+    padding: 0 0.1rem;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 7px;
+    cursor: pointer;
+    
+}
+
+.middlecard1b1:hover{
+    background-color: rgba(0, 0, 0, 0.085);
+}
+
+.mc1bi{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 2rem;
+}
+
+.mc1bi1{
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
+.mc1bin{
+    box-sizing: border-box;
+    margin: 0px 0.5rem;
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: .9rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.598);
+}
+
+.middlecard2{
+    height: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    margin: .1rem 0rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 1rem;
+    
+}
+
+.middlecard2a{
+    background-color: #c8c8c8;
+    height: 1px;
+    width: 80%;
+}
+
+.middlecard2b{
+    height: 2rem;
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.middlecard2b1{
+    height: 100%;
+    width: 50%;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    color: rgba(6, 6, 6, 0.58);
+    box-sizing: border-box;
+}
+
+.middlecard2b2{
+    width: 50%;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0px 0.3rem;
+    align-items: center;
+    color: rgb(6, 6, 6);
+}
+
+.arw{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.arwdwn{
+    height: 0.9rem;
+    width: 0.9rem;
+}
+
+/* -------------------------------------------------------- post-card work here-------------------------------------------------------------------------------------------------- */
+
+.postcard{
+    background-color: white;
+    border-radius: 7px;
+    width: 100%;
+    height: fit-content;
+}
+
+.postcards1{
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.113);
+
+}
+
+.pcs1{
+    height: 90%;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.pci1{
+    height: 1.2rem;
+    width: 1.2rem;
+}
+.pci1{
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
+.pcs2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 00.73rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.pcs2:hover{
+    text-decoration: underline;
+    color: #0707a6;
+
+}
+
+.pcs3{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 00.63rem;
+    font-weight: 300;
+    box-sizing: border-box;
+    margin: 0 0.3rem;
+    width: 79%;
+
+}
+
+.pcs4{
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.pcs4:hover{
+    background-color: rgba(0, 0, 0, 0.085);
+}
+
+.postcards2{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    background-color: white;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding: .5rem;
+    cursor: pointer;
+}
+
+.pcs2i1{
+    display: flex;
+    width: 8%;
+    height: 3rem;
+    box-sizing: border-box;
+    margin-left: .2rem;
+    margin-right: .2rem;
+    align-items: center;
+    justify-content: center;
+    /* padding-left: 1rem; */
+}
+.pcs2i2{
+    display: flex;
+    width: 70%;
+    height: 3rem;
+    padding: .3rem 0;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0 1rem;
+}
+.pcs2i3{
+    display: flex;
+    width: 18%;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.pcs2i2a{
+    display: flex;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 550;
+}
+
+.pcs2i2a:hover{
+    text-decoration: underline;
+    color: rgb(6, 6, 135);
+}
+
+.pcs2i2b{
+    display: flex;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.6rem;
+    font-weight: 400;
+    color: rgb(100, 100, 100);
+}
+
+.pcs2i2cx{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: rgb(100, 100, 100);
+    width: 10%;
+}
+
+.pcs2i2c{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.pcs2i2cy{
+    width: 10%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.globe{
+    height: .6rem;
+    width: .6rem;
+    opacity: .7;
+}
+
+.follow{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+    width: 70%;
+    border-radius: 7px;
+    color: rgb(3, 3, 115);
+    cursor: pointer;
+    
+}
+
+.follow:hover{
+    background-color: rgba(0, 0, 255, 0.058);
+}
+
+.caption{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    padding: 1rem;
+    font-size: .9rem;
+    box-sizing: border-box;
+
+}
+
+.imagesection{
+    height: fit-content;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    padding: 1rem;
+    border-bottom: 1px solid rgb(233, 233, 233);
+}
+
+.post{
+    width: 100%;
+}
+
+.feedbacksection{
+    display: flex;
+    box-sizing: border-box;
+    height: 3.5rem;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: .2em;
+  }
+
+.feedicn{
+    width: 23%;
+    border-radius: 7px;
+    display: flex;
+    box-sizing: border-box;
+    height: 90%;
+    margin: 0rem .5rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.feedicn:hover{
+    background-color: rgba(0, 0, 0, 0.101);
+}
+
+.fis{
+    height: 2rem;
+    width: 2rem;
+    margin: 0 .2rem;
+    opacity: .6;
+}
+
+.fin{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgb(108, 107, 107);
+}
+
+.rightcards1{
+    display: flex;
+    height: 3rem;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    flex-direction: row;
+    border-radius: 7px;
+}
+
+.rcs1{
+    width: 75%;
+    height: 100%;
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    font-weight: 600;
+    border-radius: 7px;
+}
+
+.rcs2{
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    border-radius: 7px;
+    width: 25%;
+}
+
+.infoicon{
+    height: 1rem;
+    width: 1rem;
+    cursor: pointer; 
+}
+
+.newscard{
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.newscard:hover{
+    background-color: rgba(0, 0, 0, 0.069);
+}
+
+.news{
+    height: 50%;
+    padding: .3rem 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: .9rem;
+    font-weight: 600;
+    box-sizing: border-box;
+}
+
+.belownews{
+    height: 50%;
+    padding: .3rem 1.7rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.65rem;
+    font-weight: 400;
+    box-sizing: border-box;
+    color: grey;
+}
+
+.sundarpichai{
+    height: 3.2rem;
+    width: 3.2rem;
+}
+
+/* ------------------------------------------------------------------------Applying Media queries-------------------------------------------------------------------------- */
+
+@media (max-width:1300px) {
+    .news{
+        font-size: .8rem;
+    }
+    .middlecard2b1{
+        font-size: 0.6rem;
+    }
+    .middlecard2b2{
+        font-size: 0.6rem;
+    }
+
+    .middlecard1b{
+        justify-content: center;
+    
+    }
+    .mc1bin{
+        font-size: .75rem;
+    }
+}
+@media (max-width:1180px) {
+    .news{
+        font-size: .75rem;
+    }
+
+    .lcard1{
+        height: 3.5rem;
+    }
+
+    .lcard2{
+        height: 6rem;
+    }
+
+    .lcard3{
+        height: 3.3rem;
+    }
+
+    .lcard3a{
+        font-size: 0.7rem;
+    }
+    .lcard3c{
+        font-size: 0.7rem;
+    }
+
+    .lcard4{
+        height: 3rem;
+    }
+
+    .lcard4a{
+        font-size: .6rem;
+    }
+
+    .lcard4b2{
+        font-size: .6rem;
+    }
+    .yellow{
+        height: 1rem;
+        width: 1rem;
+    }
+
+    .lcard5b{
+        font-size: 0.6rem;
+    }
+
+    .bookmrk{
+        height: 1rem;
+        width: 1rem;
+    }
+
+    .lcard2b2{
+        font-size: 0.6rem;
+    }
+    .lcard2b1{
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width:1111px) {
+    .news{
+        font-size: 0.65rem;
+    }
+    .belownews{
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width:1020px){
+    .leftcard{
+        visibility: collapse;
+    }
+    .rightcard{
+        visibility: collapse
+    }
+
+    .middlecard{
+        width: 90%;
+    }
+
+}
+
+@media (max-width:570px){
+    .caption{
+        font-size: 0.8rem;
+    }
+
+    .mc1bi1{
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    .mc1bi{
+        width: 1.2rem;
+    }
+
+    .mc1bin{
+        font-size: .65rem;
+        visibility: collapse;
+    }
+
+    .middlecard1{
+        height: 7rem;
+    } 
+
+     .middlecard1a2{
+        height: 70%;
+        font-size: .7rem;
+    }
+
+    .faceicon{
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .middlecard{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .middlecard1a{
+        justify-content: center;
+    }
+    .middlecard1a2{
+        width: 75%;
+    }
+
+    .middlecard2a{
+        width: 70%;
+    }
+    .middlecard2b{
+        width: 40%;
+    }
+    .middlecard2{
+        padding: 0 .1rem;
+        justify-content: space-between;
+    }
+
+    .pcs2i3{
+        visibility: collapse;
+    }
+    .sundarpichai{
+        height: 2rem;
+        width: 2rem;
+        
+    }
+
+   
+
+    .pcs3{
+        font-size: .55rem;
+    }
+
+    .fis{
+        height: 1rem;
+        width: 1rem;
+    }
+
+    .fin{
+        font-size: .8rem;
+    }
+    .middlecard1b1{
+        align-items: center;
+        justify-content: center;
+
+    }
+    .content{
+        width: 100%;
+        margin: 6px 0px;
+        box-sizing: border-box;
+    }
+
+    .middlecard1{
+        visibility: collapse;
+    }
+
+    .middlecard2{
+        visibility: collapse;
+    }
+
+    .contentbox{
+        visibility: collapse;
+    }
+
+    .contentbox2{
+        visibility: visible;
+    }
+
+    .bottomnav{
+        visibility: visible;
+    }
+    
+}
+
